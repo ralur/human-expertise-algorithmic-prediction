@@ -1,16 +1,16 @@
-#README
+# README
 
-This supplementary material contains code and data to reproduce the results in our paper "Distinguishing the Indistinguishable: Human Expertise in Algorithmic Prediction".
+This repository contains code and data to reproduce the results in our paper "Distinguishing the Indistinguishable: Human Expertise in Algorithmic Prediction".
 
 The two main code files are chest_xray.R and visual_prediction.R. These reproduce our experiments related to chest x-ray classification and the escape the room visual prediction task, respectively. Each file is self-contained, and assumes the working directory is set to the root of this repository. All experiments can be run in 10-20 minutes on a standard personal laptop; most of the runtime is dedicated to producing bootstrap confidence intervals, and can be improved by reducing the number of bootstrap replicates. The number of replicates is a hyperparameter at the top of both code files. Upon completion, both files produce all the figures in our manuscript and save them to the ./plots/ directory.
 
 The x-ray classification task relies on data (from \cite{chexternal-2021}) which is available in ./xray-data/. The visual prediction task relies on data (from \cite{human-collaboration-visual-2021}) which is available in ./visual-prediction-data/.
 
-The visual prediction task also relies on the predictions of the boosting algorithm proposed in \cite{multicalibration-boosting-regression-2023}; code to produce these predictions is available in mcboosting.ipynb, and the predictions themselves are stored in mc_predictions.csv. This notebook is adapted from code which was publicly released by \cite{multicalibration-boosting-regression-2023}. 
+visual_prediction.R relies on the predictions of the boosting algorithm proposed in \cite{multicalibration-boosting-regression-2023}; code to produce these predictions is available in mcboosting.ipynb, and the predictions themselves are stored in mc_predictions.csv. This notebook is adapted from code released with \cite{multicalibration-boosting-regression-2023}. 
 
 helpers.R contains helper functions which are called in chest_xray.R and visual_prediction.R. LSboost.py and helper_functions.py contain helper functions for the mcboosting.ipynb notebook.
 
-#Libraries
+# Dependencies
 The R scripts depend on the following libraries:
 
 library(tidyverse)
@@ -31,7 +31,7 @@ import time
 import warnings
 
 
-#References
+# References
 
 @misc{chexpert-dataset-2019,
 Author = {Jeremy Irvin and Pranav Rajpurkar and Michael Ko and Yifan Yu and Silviana Ciurea-Ilcus and Chris Chute and Henrik Marklund and Behzad Haghgoo and Robyn Ball and Katie Shpanskaya and Jayne Seekins and David A. Mong and Safwan S. Halabi and Jesse K. Sandberg and Ricky Jones and David B. Larson and Curtis P. Langlotz and Bhavik N. Patel and Matthew P. Lungren and Andrew Y. Ng},
