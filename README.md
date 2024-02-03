@@ -19,7 +19,7 @@ The R scripts depend on the following libraries:
 
 tidyverse, glue, data.table, cluster, Cairo, boot, mltools
 
-The python notebook depends on the following libraries
+The python notebook depends on the following libraries:
 
 pandas, numpy, sklearn
 
