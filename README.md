@@ -17,22 +17,11 @@ helpers.R contains helper functions which are called in chest_xray.R and visual_
 ## Libraries
 The R scripts depend on the following libraries:
 
-library(tidyverse)
-library(glue)
-library(data.table)
-library(cluster)
-library(Cairo)
-library(boot)
-library(mltools)
+tidyverse, glue, data.table, cluster, Cairo, boot, mltools
 
 The python notebook depends on the following libraries
 
-import pandas as pd
-import numpy as np
-import sklearn as sk
-import gc
-import time
-import warnings
+pandas, numpy, sklearn
 
 ## References
 
